@@ -12,7 +12,7 @@ import useOnScroll from '@/hooks/useOnScroll';
 
 const workLinks = [
   { title: 'Skills & Tools', href: '/work/skills-and-tools' },
-  { title: 'Experience', href: '/work/experience' },
+  { title: 'Blog', href: '/blog' },
   { title: 'Studio', href: '/work/studio' },
   { title: 'Contact', href: '/work/contact' },
 ];
@@ -51,7 +51,7 @@ function Navbar() {
                 <NavLink title="Projects" href="/projects" />
               </li> */}
               <li>
-                <NavLink title="Blog" href="/blog" />
+                <NavLink title="Experience" href="/work/experience" />
               </li>
               <li>
                 <NavLink title="Education" href="/education" />
