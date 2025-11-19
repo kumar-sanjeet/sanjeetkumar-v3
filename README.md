@@ -1,9 +1,9 @@
 <div>
   <h1>
-    Sanjeet Kumar's Portfolio (sanjeetkumar-v2)
+    Sanjeet Kumar's Portfolio (sanjeetkumar-v3)
     &middot;
-    <a href="https://github.com/kumar-sanjeet/sanjeetkumar-v2/deployments/activity_log?environment=production"><img src="https://img.shields.io/github/deployments/kumar-sanjeet/sanjeetkumar-v2/production?label=cloudflare&style=flat-square"/></a>
-    <a href="https://github.com/kumar-sanjeet/sanjeetkumar-v2/commits/main"><img src="https://img.shields.io/github/commit-activity/m/kumar-sanjeet/sanjeetkumar-v2?style=flat-square"/></a>
+    <a href="https://github.com/kumar-sanjeet/sanjeetkumar-v3/deployments/activity_log?environment=production"><img src="https://img.shields.io/github/deployments/kumar-sanjeet/sanjeetkumar-v3/production?label=cloudflare&style=flat-square"/></a>
+    <a href="https://github.com/kumar-sanjeet/sanjeetkumar-v3/commits/main"><img src="https://img.shields.io/github/commit-activity/m/kumar-sanjeet/sanjeetkumar-v3?style=flat-square"/></a>
   </h1>
 </div>
 
@@ -18,7 +18,7 @@ Personal portfolio website showcasing my journey as an **Enterprise Architecture
 This is a **monorepo** built with [Turborepo](https://turbo.build/repo) and [pnpm workspaces](https://pnpm.io/workspaces).
 
 ```
-sanjeetkumar-v2/
+sanjeetkumar-v3/
 ├── apps/
 │   └── sanjeetkumar.com/          # Main portfolio (Next.js static site)
 ├── packages/                       # Shared packages (future use)
@@ -56,8 +56,8 @@ While currently a single application, this structure provides:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/kumar-sanjeet/sanjeetkumar-v2.git
-   cd sanjeetkumar-v2
+   git clone https://github.com/kumar-sanjeet/sanjeetkumar-v3.git
+   cd sanjeetkumar-v3
    ```
 
 2. **Install dependencies**

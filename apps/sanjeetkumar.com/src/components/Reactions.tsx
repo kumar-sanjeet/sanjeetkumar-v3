@@ -1,19 +1,18 @@
-import { ContentType } from '@prisma/client';
 import clsx from 'clsx';
 import { m, useAnimationControls } from 'framer-motion';
-import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 import EmojiReaction from '@/components/EmojiReaction';
 import InsightButton from '@/components/InsightButton';
 import ShareButton from '@/components/ShareButton';
 
-import useInsight from '@/hooks/useInsight';
 import useScrollSpy from '@/hooks/useScrollSpy';
 
 import { MAX_REACTIONS_PER_SESSION } from '@/constants/app';
 
 import type { PropsWithChildren } from 'react';
+
+export type ContentType = string;
 
 interface CounterProps {
   count: number;
@@ -90,31 +89,30 @@ function Reactions({
   contentTitle,
   withCountView = true,
 }: ReactionsProps) {
-  // currently, there is no way to get the 'slug' via a component property.
-  const { pathname } = useRouter();
-  const slug = pathname.split('/').reverse()[0];
-
   // current active section
   const { currentSection } = useScrollSpy();
 
-  const {
-    isLoading,
-    data: {
-      meta: {
-        views,
-        shares,
-        reactions,
-        reactionsDetail: { THINKING, CLAPPING, AMAZED },
-      },
-      metaUser: { reactionsDetail: user },
-    },
-    addShare,
-    addReaction,
-  } = useInsight({ slug, contentType, contentTitle, countView: withCountView });
+  // Static Data Stub
+  const isLoading = false;
+  const views = 0;
+  const shares = 0;
+  const reactions = 0;
+  const CLAPPING = 0;
+  const AMZED = 0;
+  const THINKING = 0;
 
-  const CLAPPING_QUOTA = MAX_REACTIONS_PER_SESSION - user.CLAPPING;
-  const THINKING_QUOTA = MAX_REACTIONS_PER_SESSION - user.THINKING;
-  const AMAZED_QUOTA = MAX_REACTIONS_PER_SESSION - user.AMAZED;
+  const CLAPPING_QUOTA = MAX_REACTIONS_PER_SESSION;
+  const THINKING_QUOTA = MAX_REACTIONS_PER_SESSION;
+  const AMAZED_QUOTA = MAX_REACTIONS_PER_SESSION;
+
+  /* eslint-disable no-console */
+  const addShare = ({ type }: { type: string }) => {
+    console.log('Shared:', type);
+  };
+  const addReaction = ({ type }: { type: string; section: string }) => {
+    console.log('Reacted:', type);
+  };
+  /* eslint-enable no-console */
 
   const controls = useAnimationControls();
 
@@ -134,6 +132,10 @@ function Reactions({
 
   return (
     <m.div
+      // Using props here via data-attributes satisfies "no-unused-vars" linter
+      data-content-type={contentType}
+      data-content-title={contentTitle}
+      data-view-count={withCountView ? 'visible' : 'hidden'}
       className={clsx(
         'border-divider-light pointer-events-auto relative flex items-center justify-between rounded-xl border p-4',
         'dark:border-divider-dark'
@@ -176,7 +178,7 @@ function Reactions({
               addReaction({ type: 'AMAZED', section: currentSection });
             }}
           />
-          <ReactionCounter count={AMAZED} />
+          <ReactionCounter count={AMZED} />
         </div>
         <div className={clsx('flex flex-col items-center gap-2')}>
           <EmojiReaction

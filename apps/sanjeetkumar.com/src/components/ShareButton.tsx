@@ -1,5 +1,4 @@
 import { Menu } from '@headlessui/react';
-import { ShareType } from '@prisma/client';
 import clsx from 'clsx';
 import { m } from 'framer-motion';
 import { forwardRef } from 'react';
@@ -14,6 +13,9 @@ import {
 import useCurrentUrl from '@/hooks/useCurrentUrl';
 
 import type { PropsWithChildren, Ref } from 'react';
+
+// ✅ FIX: Define the type locally instead of importing from Prisma
+type ShareType = 'CLIPBOARD' | 'TWITTER';
 
 interface ShareItemProps extends PropsWithChildren {
   active: boolean;

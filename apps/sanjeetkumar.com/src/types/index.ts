@@ -1,4 +1,6 @@
-import type { ContentType, ReactionType, ShareType } from '@prisma/client';
+export type ContentType = 'POST' | 'PROJECT' | 'SNIPPET';
+export type ReactionType = 'CLAPPING' | 'THINKING' | 'AMAZED';
+export type ShareType = 'TWITTER' | 'FACEBOOK' | 'LINKEDIN';
 
 export type TApiResponse = {
   message: string;

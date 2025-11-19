@@ -1,73 +1,19 @@
-import { ContentType, ReactionType, ShareType } from '@prisma/client';
-import axios from 'axios';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { ContentType, ReactionType, ShareType } from '@/types';
 
-import { TApiResponse } from '@/types';
+// Dummy functions with implicit returns to satisfy 'arrow-body-style'
+export const getContentMeta = async (_slug: string) => ({
+  views: 0,
+  shares: 0,
+  reactions: 0,
+});
 
-export const postReaction = async ({
-  slug,
-  contentType,
-  contentTitle,
-  type,
-  count,
-  section,
-}: {
-  slug: string;
-  contentType: ContentType;
-  contentTitle: string;
-  type: ReactionType;
-  count: number;
-  section: string;
-}) => {
-  try {
-    await axios.post<TApiResponse>(`/api/reactions/${slug}`, {
-      contentType,
-      contentTitle,
-      type,
-      count,
-      section,
-    });
-  } catch (err) {
-    //
-  }
-};
+export const addView = async (_slug: string) => null;
 
-export const postShare = async ({
-  slug,
-  contentType,
-  contentTitle,
-  type,
-}: {
-  slug: string;
-  contentType: ContentType;
-  contentTitle: string;
-  type: ShareType;
-}) => {
-  try {
-    await axios.post<TApiResponse>(`/api/shares/${slug}`, {
-      contentType,
-      contentTitle,
-      type,
-    });
-  } catch (err) {
-    //
-  }
-};
+export const addShare = async (_slug: string, _type: ShareType) => null;
 
-export const postView = async ({
-  slug,
-  contentType,
-  contentTitle,
-}: {
-  slug: string;
-  contentType: ContentType;
-  contentTitle: string;
-}) => {
-  try {
-    await axios.post<TApiResponse>(`/api/views/${slug}`, {
-      contentType,
-      contentTitle,
-    });
-  } catch (err) {
-    //
-  }
-};
+export const addReaction = async (
+  _slug: string,
+  _type: ReactionType,
+  _section: string
+) => null;
