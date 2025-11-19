@@ -17,7 +17,7 @@ build
 # misc
 .DS_Store
 *.pem
-*.tsbuildinfo
+.tsbuildinfo
 
 # debug
 npm-debug.log*
@@ -39,3 +39,10 @@ sitemap.xml
 
 # prevent accidentally committing and pushing draft files/directories
 *((DRAFT))*
+
+# Add these to your root .gitignore
+*.code-workspace
+.pnpm-store
+.env
+pnpm-debug.log*
+Thumbs.db
