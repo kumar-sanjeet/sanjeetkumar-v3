@@ -7,62 +7,148 @@
   </h1>
 </div>
 
-This is the monorepo for my personal portfolio website, built with Turborepo and pnpm.
+Personal portfolio website showcasing my journey as an **Enterprise Architecture Manager** aspiring to become an **AI Architect**.
 
-## 🚀 Live Site
+## 🌐 Live Site
 
-The site is deployed on Cloudflare Pages. **[Link to your live site here]**
+**[sanjeetkumar.com](https://sanjeetkumar.com)** - Deployed on Cloudflare Pages
 
-### Tech Stack
+## 🏗️ Project Structure
 
-- 🚀 Next.js + TypeScript
-- 🍃 Tailwind CSS
-- ⚡ Turborepo
-- 📦 pnpm
-
-### Running the Project
-
-First, ensure you have [pnpm installed](https://pnpm.io/installation).
-
-Clone the repository to your local machine:
+This is a **monorepo** built with [Turborepo](https://turbo.build/repo) and [pnpm workspaces](https://pnpm.io/workspaces).
 
 ```
-git clone <your-fork>
+sanjeetkumar-v2/
+├── apps/
+│   └── sanjeetkumar.com/          # Main portfolio (Next.js static site)
+├── packages/                       # Shared packages (future use)
+├── scripts/                        # Build and utility scripts
+└── [config files]                  # Root-level configuration
 ```
 
-Navigate to the project's root directory:
+### Why Monorepo?
 
+While currently a single application, this structure provides:
+
+- Easy addition of future projects (AI APIs, admin panels, microservices)
+- Shared code between projects via `packages/`
+- Consistent tooling and configurations
+- Scalable architecture aligned with enterprise practices
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15+ with TypeScript
+- **Styling**: Tailwind CSS + MDX
+- **Package Manager**: pnpm
+- **Build System**: Turborepo
+- **Deployment**: Cloudflare Pages (Static Export)
+- **Languages**: TypeScript (70%), MDX (20%), JavaScript (5%), CSS (5%)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) 20+ (LTS)
+- [pnpm](https://pnpm.io/installation) 9+
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/kumar-sanjeet/sanjeetkumar-v2.git
+   cd sanjeetkumar-v2
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   pnpm install
+   ```
+
+3. **Run development server**
+
+   ```bash
+   pnpm dev
+   ```
+
+4. **Open in browser**
+   ```
+   http://localhost:3000
+   ```
+
+### Available Scripts
+
+```bash
+# Development
+pnpm dev              # Start dev server
+pnpm build            # Build for production
+pnpm start            # Preview production build locally
+
+# Turborepo commands
+pnpm turbo run dev    # Run all workspace apps in dev mode
+pnpm turbo run build  # Build all workspace apps
+pnpm turbo run lint   # Lint all workspace apps
 ```
-cd ./sanjeetkumar-v2
+
+## 📦 Building for Production
+
+This site uses **Next.js Static HTML Export** for Cloudflare Pages:
+
+```bash
+# Build static files
+pnpm build
+
+# Output directory
+apps/sanjeetkumar.com/out
 ```
 
-Next, copy the development version of the `env` file:
+## ☁️ Deployment (Cloudflare Pages)
 
-```
-cp ./apps/sanjeetkumar.com/env.example ./apps/sanjeetkumar.com/env.local
-```
+### Build Configuration
 
-Now, you have the `env.local` file ready for configuration:
+- **Framework preset**: Next.js (Static HTML Export)
+- **Build command**: `pnpm run build`
+- **Build output directory**: `apps/sanjeetkumar.com/out`
+- **Root directory**: `/`
+- **Node version**: `20`
 
-```
-DATABASE_URL = your-database-connection-string
-SALT_IP_ADDRESS = super-secret
-```
+### Automatic Deployments
 
-For the `DATABASE_URL` use your database connection string. I personally use the free version of [MongoDB](https://www.mongodb.com/), and you can do the same by creating a database there and [adding the connection string](https://www.mongodb.com/basics/mongodb-connection-string) to the `env.local`.
+- **Production**: Deploys automatically on push to `main` branch
+- **Preview**: Deploys automatically for pull requests
 
-As for `SALT_IP_ADDRESS`, feel free to fill it with some of your secret words. It acts as a salt for hashing users' IP addresses.
+## 🎯 Future Roadmap
 
-Once configuration is complete, still at the root of the project directory, install the required dependencies:
+- [ ] Add AI/ML project showcases
+- [ ] Integrate blog with technical articles
+- [ ] Add backend API for dynamic features (`apps/api`)
+- [ ] Create shared UI component library (`packages/ui`)
+- [ ] Add shared TypeScript types (`packages/types`)
+- [ ] Implement analytics and monitoring
 
-```
-pnpm install
-```
+## 🤝 Contributing
 
-Finally, run the project:
+This is a personal portfolio, but suggestions and feedback are welcome!
 
-```
-pnpm dev
-```
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Now, your project should be up and running smoothly!
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📬 Contact
+
+**Sanjeet Kumar** - Enterprise Architecture Manager
+
+- Portfolio: [sanjeetkumar.com](https://sanjeetkumar.com)
+- GitHub: [@kumar-sanjeet](https://github.com/kumar-sanjeet)
+- LinkedIn: [linkedin.com/in/sanjeetkumar](https://linkedin.com/in/sanjeetkumar)
+
+---
+
+Built with ❤️ using Next.js, TypeScript, and Cloudflare Pages
