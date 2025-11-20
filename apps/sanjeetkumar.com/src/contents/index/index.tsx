@@ -74,7 +74,7 @@ function FeaturedCardSection() {
             </div>
           }
           title="Enterprise Architecture"
-          desc="TOGAF and PMP certified with hands-on experience in setting up EA domains and frameworks.."
+          desc="TOGAF and PMP certified with experience in setting up EA domains and frameworks."
         />
         <FeaturedCard
           icon={
