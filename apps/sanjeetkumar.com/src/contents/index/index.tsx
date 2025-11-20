@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 
-import AboutSection from '@/contents/index/AboutSection';
 import CleanIntuitive from '@/contents/index/CleanIntuitive';
 import FeaturedCard from '@/contents/index/FeaturedCard';
 import Header from '@/contents/index/Header';
@@ -17,24 +16,6 @@ function QuoteSection() {
         <Quote />
       </div>
     </div>
-  );
-}
-
-function IndexContents() {
-  return (
-    <>
-      <Header />
-      <AboutSection />
-      <div className={clsx('hidden', 'lg:mb-24 lg:block')}>
-        <FeaturedCardSection />
-      </div>
-      <div className={clsx('-mt-12 mb-12', 'md:mb-12 md:mt-0')}>
-        <QuoteSection />
-      </div>
-      <section>
-        <CleanIntuitive />
-      </section>
-    </>
   );
 }
 
@@ -139,6 +120,23 @@ function FeaturedCardSection() {
         />
       </div>
     </div>
+  );
+}
+
+function IndexContents() {
+  return (
+    <>
+      <Header />
+      <div className={clsx('hidden', 'lg:mb-24 lg:block')}>
+        <FeaturedCardSection />
+      </div>
+      <div className={clsx('-mt-12 mb-12', 'md:mb-12 md:mt-0')}>
+        <QuoteSection />
+      </div>
+      <section>
+        <CleanIntuitive />
+      </section>
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 
 import HeaderCta from '@/contents/index/Header/HeaderCta';
+import HeaderDescription from '@/contents/index/Header/HeaderDescription';
 import HeaderImage from '@/contents/index/Header/HeaderImage';
 import HeaderTechStack from '@/contents/index/Header/HeaderTechStack';
 import HeaderTitle from '@/contents/index/Header/HeaderTitle';
@@ -22,7 +23,10 @@ function Header() {
           <div className={clsx('mt-6 md:mt-8')}>
             <HeaderCta isFree={false} />
           </div>
-          <div className={clsx('mt-20 lg:mt-36')}>
+          <div className={clsx('mt-10 lg:mt-12')}>
+            <HeaderDescription />
+          </div>
+          <div className={clsx('mt-12 lg:mt-16')}>
             <HeaderTechStack />
           </div>
           <div
