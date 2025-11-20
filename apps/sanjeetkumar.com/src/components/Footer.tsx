@@ -97,7 +97,7 @@ function FooterDescription() {
         About Me
       </div>
       <p className={clsx('mb-4 font-normal leading-relaxed')}>
-        Enterprise Architecture Director & AI Architect with expertise in RPA, AI, and Digital Transformation.
+        Enterprise Architecture Director & AI Architect with expertise in AI, Digital Transformation, and M&A.
       </p>
       <ul className={clsx('-ml-2 flex gap-1')}>
         <li>
