@@ -1,3 +1,4 @@
+
 import clsx from 'clsx';
 import { m } from 'framer-motion';
 import Image from 'next/image';
@@ -21,8 +22,153 @@ const animation = {
 
 function HeaderTechStack() {
   return (
-    <div className={clsx('flex flex-col gap-6', 'lg:flex-row lg:gap-24')}>
-      {/* First Column (Existing) */}
+    <div className={clsx('grid grid-cols-1 gap-6', 'lg:grid-cols-3 lg:gap-8')}>
+      {/* First Column (New Logos - Swapped) */}
+      <div>
+        <m.p
+          className={clsx('mb-2.5 text-sm text-slate-600', 'dark:text-slate-400')}
+          initial={animation.hide}
+          animate={animation.show}
+          transition={{ delay: 0.8 }}
+        >
+          my favourite technologies/frameworks:
+        </m.p>
+        <m.ul
+          className={clsx(
+            'flex items-center gap-3.5 text-slate-500',
+            'dark:text-slate-500'
+          )}
+          initial="hide"
+          animate="show"
+          transition={{ delayChildren: 0.8, staggerChildren: 0.025 }}
+        >
+          {/* OpenAI */}
+          <m.li variants={animation}>
+            <a
+              href="https://platform.openai.com/docs/overview"
+              target="_blank"
+              rel="noreferrer"
+              className={clsx('transition duration-200 hover:opacity-70')}
+            >
+              <img
+                src="https://cdn.simpleicons.org/openai/808080"
+                alt="OpenAI"
+                className="h-6 w-6 dark:invert"
+              />
+            </a>
+          </m.li>
+
+          {/* TOGAF */}
+          <m.li variants={animation}>
+            <a
+              href="https://www.opengroup.org/togaf"
+              target="_blank"
+              rel="noreferrer"
+              className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}
+            >
+              <Image
+                src="/assets/images/logos/togaf.png"
+                alt="TOGAF"
+                width={24}
+                height={24}
+                className="h-6 w-auto object-contain"
+              />
+            </a>
+          </m.li>
+
+          {/* PMP */}
+          <m.li variants={animation}>
+            <a
+              href="https://www.pmi.org/certifications/project-management-pmp"
+              target="_blank"
+              rel="noreferrer"
+              className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}
+            >
+              <Image
+                src="/assets/images/logos/pmp.svg"
+                alt="PMP"
+                width={24}
+                height={24}
+                className="h-6 w-auto object-contain"
+              />
+            </a>
+          </m.li>
+
+          {/* CGEIT */}
+          <m.li variants={animation}>
+            <a
+              href="https://www.isaca.org/credentialing/cgeit"
+              target="_blank"
+              rel="noreferrer"
+              className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}
+            >
+              <Image
+                src="/assets/images/logos/cgeit.png"
+                alt="CGEIT"
+                width={24}
+                height={24}
+                className="h-6 w-auto object-contain"
+              />
+            </a>
+          </m.li>
+
+          {/* AWS */}
+          <m.li variants={animation}>
+            <a
+              href="https://aws.amazon.com/ai/"
+              target="_blank"
+              rel="noreferrer"
+              className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}
+            >
+              <Image
+                src="/assets/images/logos/aws.png"
+                alt="AWS"
+                width={24}
+                height={24}
+                className="h-6 w-auto object-contain"
+              />
+            </a>
+          </m.li>
+
+          {/* COBIT */}
+          <m.li variants={animation}>
+            <a
+              href="https://www.isaca.org/credentialing/cobit-foundation"
+              target="_blank"
+              rel="noreferrer"
+              className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}
+            >
+              <Image
+                src="/assets/images/logos/cobit.png"
+                alt="COBIT"
+                width={24}
+                height={24}
+                className="h-6 w-auto object-contain"
+              />
+            </a>
+          </m.li>
+
+           {/* Antigravity */}
+           <m.li variants={animation}>
+            <a
+              href="https://antigravity.google/"
+              target="_blank"
+              rel="noreferrer"
+              className={clsx('transition duration-200 hover:opacity-80')}
+            >
+              <Image
+                src="/assets/images/google-antigravity.png"
+                alt="Google Antigravity"
+                width={24}
+                height={24}
+                className={clsx('h-6 w-6')}
+              />
+            </a>
+          </m.li>
+        </m.ul>
+      </div>
+
+      {/* Second Column (Existing Tech Stack - Swapped) */}
       <div>
         <m.p
           className={clsx('mb-2.5 text-sm text-slate-600', 'dark:text-slate-400')}
@@ -70,23 +216,6 @@ function HeaderTechStack() {
               <NextJsIcon className={clsx('h-6 w-6')} />
             </div>
           </m.li>
-
-          <m.li variants={animation}>
-            <a
-              href="https://antigravity.google/"
-              target="_blank"
-              rel="noreferrer"
-              className={clsx('transition duration-200 hover:opacity-80')}
-            >
-              <Image
-                src="/assets/images/google-antigravity.png"
-                alt="Google Antigravity"
-                width={24}
-                height={24}
-                className={clsx('h-6 w-6')}
-              />
-            </a>
-          </m.li>
           <m.li variants={animation}>
             <div className={clsx('transition duration-200 hover:text-[#F24E1E]')}>
               <FigmaIcon className={clsx('h-6 w-6')} />
@@ -95,69 +224,9 @@ function HeaderTechStack() {
         </m.ul>
       </div>
 
-      {/* Second Column (New) */}
-      <div>
-        <m.p
-          className={clsx('mb-2.5 text-sm text-slate-600', 'dark:text-slate-400')}
-          initial={animation.hide}
-          animate={animation.show}
-          transition={{ delay: 0.8 }}
-        >
-          my favourite technologies:
-        </m.p>
-        <m.ul
-          className={clsx(
-            'flex items-center gap-3.5 text-slate-500',
-            'dark:text-slate-500'
-          )}
-          initial="hide"
-          animate="show"
-          transition={{ delayChildren: 0.8, staggerChildren: 0.025 }}
-        >
-          {/* AWS */}
-          <m.li variants={animation}>
-            <div className={clsx('transition duration-200 hover:opacity-70')}>
-               <img src="https://cdn.simpleicons.org/amazonwebservices/808080" alt="AWS" className="h-6 w-6 dark:invert" />
-            </div>
-          </m.li>
-          {/* Google Cloud */}
-          <m.li variants={animation}>
-            <div className={clsx('transition duration-200 hover:opacity-70')}>
-               <img src="https://cdn.simpleicons.org/googlecloud/808080" alt="Google Cloud" className="h-6 w-6 dark:invert" />
-            </div>
-          </m.li>
-          {/* Azure */}
-          <m.li variants={animation}>
-            <div className={clsx('transition duration-200 hover:opacity-70')}>
-               <img src="https://cdn.simpleicons.org/microsoftazure/808080" alt="Azure" className="h-6 w-6 dark:invert" />
-            </div>
-          </m.li>
-          {/* OpenAI */}
-          <m.li variants={animation}>
-            <div className={clsx('transition duration-200 hover:opacity-70')}>
-               <img src="https://cdn.simpleicons.org/openai/808080" alt="OpenAI" className="h-6 w-6 dark:invert" />
-            </div>
-          </m.li>
-          {/* The Open Group */}
-          <m.li variants={animation}>
-            <div className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}>
-               <img src="https://logo.clearbit.com/opengroup.org" alt="The Open Group" className="h-6 w-6 bg-white rounded-full p-0.5" />
-            </div>
-          </m.li>
-          {/* PMI */}
-          <m.li variants={animation}>
-            <div className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}>
-               <img src="https://logo.clearbit.com/pmi.org" alt="PMI" className="h-6 w-6 bg-white rounded-full p-0.5" />
-            </div>
-          </m.li>
-          {/* ISACA */}
-          <m.li variants={animation}>
-            <div className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}>
-               <img src="https://logo.clearbit.com/isaca.org" alt="ISACA" className="h-6 w-6 bg-white rounded-full p-0.5" />
-            </div>
-          </m.li>
-        </m.ul>
-      </div>
+      {/* Empty Third Column for Grid Alignment */}
+      <div className="hidden lg:block" />
+
     </div>
   );
 }

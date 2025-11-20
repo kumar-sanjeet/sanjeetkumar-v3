@@ -5,6 +5,7 @@ import FeaturedCard from '@/contents/index/FeaturedCard';
 import Header from '@/contents/index/Header';
 import Quote from '@/contents/index/Quote';
 
+
 // ... (keep existing icons)
 
 // ... (keep existing FeaturedCardSection)
@@ -123,6 +124,8 @@ function FeaturedCardSection() {
   );
 }
 
+
+
 function IndexContents() {
   return (
     <>
@@ -130,6 +133,7 @@ function IndexContents() {
       <div className={clsx('hidden', 'lg:mb-24 lg:block')}>
         <FeaturedCardSection />
       </div>
+
       <div className={clsx('-mt-12 mb-12', 'md:mb-12 md:mt-0')}>
         <QuoteSection />
       </div>
