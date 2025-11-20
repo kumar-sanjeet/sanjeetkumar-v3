@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { m } from 'framer-motion';
+import Image from 'next/image';
 
 import {
   FigmaIcon,
@@ -8,7 +9,6 @@ import {
   ReactIcon,
   TailwindCssIcon,
   TypeScriptIcon,
-  VSCodeIcon,
 } from '@/components/Icons';
 
 const animation = {
@@ -68,13 +68,22 @@ function HeaderTechStack() {
             <NextJsIcon className={clsx('h-6 w-6')} />
           </div>
         </m.li>
+
         <m.li variants={animation}>
-          <div className={clsx('h-3 w-[1px] bg-slate-300 dark:bg-slate-700')} />
-        </m.li>
-        <m.li variants={animation}>
-          <div className={clsx('transition duration-200 hover:text-[#007ACC]')}>
-            <VSCodeIcon className={clsx('h-6 w-6')} />
-          </div>
+          <a
+            href="https://antigravity.google/"
+            target="_blank"
+            rel="noreferrer"
+            className={clsx('transition duration-200 hover:opacity-80')}
+          >
+            <Image
+              src="/assets/images/google-antigravity.png"
+              alt="Google Antigravity"
+              width={24}
+              height={24}
+              className={clsx('h-6 w-6')}
+            />
+          </a>
         </m.li>
         <m.li variants={animation}>
           <div className={clsx('transition duration-200 hover:text-[#F24E1E]')}>

@@ -74,7 +74,7 @@ function FeaturedCardSection() {
             </div>
           }
           title="Enterprise Architecture"
-          desc="TOGAF certified with hands-on experience in setting up EA domains and frameworks."
+          desc="TOGAF and PMP certified with hands-on experience in setting up EA domains and frameworks.."
         />
         <FeaturedCard
           icon={
@@ -88,7 +88,7 @@ function FeaturedCardSection() {
             </div>
           }
           title="AI & Automation"
-          desc="Rapid prototyping using Agentic AI frameworks and RPA solutions."
+          desc="Rapid prototyping for business solutions using Agentic AI frameworks ."
         />
         <FeaturedCard
           icon={
@@ -102,7 +102,7 @@ function FeaturedCardSection() {
             </div>
           }
           title="IT Compliance"
-          desc="CGEIT and COBIT 5 certified with expertise in IT governance, M&A, and compliance."
+          desc="CGEIT and COBIT 5 certified with expertise in IT governance, standardization, and M&A."
         />
       </div>
     </div>

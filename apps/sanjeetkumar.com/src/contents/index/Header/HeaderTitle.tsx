@@ -93,9 +93,9 @@ function HeaderTitle() {
           >
             Enterprise Architect
           </strong>{' '}
-          specializing in AI, RPA,{' '}
+          specializing in AI, Business Process Automation,{' '}
           <span className={clsx('block')}>
-            and Business Process Automation.
+            and M&A.
           </span>
         </m.h1>
       </span>

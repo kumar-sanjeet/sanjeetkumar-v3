@@ -661,3 +661,4 @@ export function LinkedInIcon({ ...props }: ComponentProps<'svg'>) {
     </svg>
   );
 }
+
