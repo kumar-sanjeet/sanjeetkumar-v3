@@ -96,12 +96,12 @@ export const getPostStructuredData = ({
     image: images,
     datePublished: formatDateISO(datePublished),
     dateModified: formatDateISO(dateModified),
-    author: [
-      {
-        '@type': 'Person',
-        name: 'Enji Kusnadi',
-        jobTitle: 'Front-End Developer',
-        url: 'https://www.sanjeetkumar.com/about',
-      },
-    ],
+      author: [
+        {
+          '@type': 'Person',
+          name: 'Sanjeet Kumar',
+          jobTitle: 'Enterprise Architecture Director',
+          url: 'https://www.sanjeetkumar.com/about',
+        },
+      ],
   });
