@@ -1,9 +1,42 @@
 import clsx from 'clsx';
 
+import AboutSection from '@/contents/index/AboutSection';
 import CleanIntuitive from '@/contents/index/CleanIntuitive';
 import FeaturedCard from '@/contents/index/FeaturedCard';
 import Header from '@/contents/index/Header';
 import Quote from '@/contents/index/Quote';
+
+// ... (keep existing icons)
+
+// ... (keep existing FeaturedCardSection)
+
+function QuoteSection() {
+  return (
+    <div className={clsx('content-wrapper')}>
+      <div className={clsx('flex items-center justify-center py-8')}>
+        <Quote />
+      </div>
+    </div>
+  );
+}
+
+function IndexContents() {
+  return (
+    <>
+      <Header />
+      <AboutSection />
+      <div className={clsx('hidden', 'lg:mb-24 lg:block')}>
+        <FeaturedCardSection />
+      </div>
+      <div className={clsx('-mt-12 mb-12', 'md:mb-12 md:mt-0')}>
+        <QuoteSection />
+      </div>
+      <section>
+        <CleanIntuitive />
+      </section>
+    </>
+  );
+}
 
 // Custom icons for the sections
 function BuildingIcon({ ...props }: React.ComponentProps<'svg'>) {
@@ -109,31 +142,6 @@ function FeaturedCardSection() {
   );
 }
 
-function QuoteSection() {
-  return (
-    <div className={clsx('content-wrapper')}>
-      <div className={clsx('flex items-center justify-center py-8')}>
-        <Quote />
-      </div>
-    </div>
-  );
-}
 
-function IndexContents() {
-  return (
-    <>
-      <Header />
-      <div className={clsx('hidden', 'lg:-mt-16 lg:mb-24 lg:block')}>
-        <FeaturedCardSection />
-      </div>
-      <div className={clsx('-mt-12 mb-12', 'md:mb-12 md:mt-0')}>
-        <QuoteSection />
-      </div>
-      <section>
-        <CleanIntuitive />
-      </section>
-    </>
-  );
-}
 
 export default IndexContents;
