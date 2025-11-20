@@ -38,6 +38,10 @@ function Index() {
       'Digital Transformation',
       'IT Governance',
       'Agentic AI',
+      'Business Automation using AI',
+      'Enterprise Architecture Manager',
+      'Chief Enterprise Architect',
+      'Principal Enterprise Architect',
     ],
     sameAs: [
       'https://www.linkedin.com/in/sanjeetkumar',
@@ -49,7 +53,7 @@ function Index() {
     <>
       <Head
         title="Sanjeet Kumar · Enterprise Architect · Enterprise Architecture Director · AI Architect"
-        description="Sanjeet Kumar - Enterprise Architect & Enterprise Architecture Director at LandSure Systems. Available for Enterprise Architecture Manager, Chief Enterprise Architect, and Principal Enterprise Architect roles. TOGAF & Harvard AI certified with 20+ years experience in Enterprise Architecture, AI/RPA, Business Process Automation, IT Governance, and Digital Transformation. Expertise in UiPath, Blue Prism, Agentic AI, CGEIT, COBIT 5, PMP."
+        description="Sanjeet Kumar - Enterprise Architect & Enterprise Architecture Director at LandSure Systems. Available for Enterprise Architecture Manager, Chief Enterprise Architect, and Principal Enterprise Architect roles. TOGAF & Harvard AI certified with 20+ years experience in Enterprise Architecture, AI/RPA, Business Automation using AI, IT Governance, and Digital Transformation. Expertise in UiPath, Blue Prism, Agentic AI, CGEIT, COBIT 5, PMP."
         ogImage={`${getBaseUrl()}/assets/images/og-image.png`}
         overrideTitle
         structuredData={structuredData}
