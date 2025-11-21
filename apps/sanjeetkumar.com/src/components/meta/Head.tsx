@@ -8,6 +8,7 @@ interface HeadProps {
   ogImage: string;
   overrideTitle?: boolean;
   structuredData?: string;
+  keywords?: Array<string>;
 }
 
 function Head({
@@ -16,6 +17,7 @@ function Head({
   ogImage,
   overrideTitle = false,
   structuredData = '',
+  keywords = [],
 }: HeadProps) {
   const currentUrl = useCurrentUrl();
 
@@ -27,7 +29,17 @@ function Head({
     <NextHead>
       <title>{htmlTitle}</title>
       <meta name="description" content={description} />
-      <link rel="icon" href="/favicon.ico" />
+      {keywords.length > 0 && (
+        <meta name="keywords" content={keywords.join(', ')} />
+      )}
+      <link rel="icon" href="/favicon/favicon-96x96.png" type="image/png" />
+      <link
+        rel="icon"
+        href="/favicon/web-app-manifest-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      />
+      <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
 
       {/* seo */}
       <link rel="canonical" href={currentUrl} />

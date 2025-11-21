@@ -10,7 +10,11 @@ function Index() {
     '@type': 'Person',
     name: 'Sanjeet Kumar',
     url: 'https://www.sanjeetkumar.com',
-    jobTitle: 'Enterprise Architecture Director',
+    jobTitle: [
+      'Enterprise Architecture Director',
+      'Sovereign AI Strategist',
+      'Technology Governance Lead',
+    ],
     worksFor: {
       '@type': 'Organization',
       name: 'LandSure Systems Ltd.',
@@ -30,31 +34,29 @@ function Index() {
       },
     ],
     knowsAbout: [
+      'Sovereign AI',
+      'AI Ethics',
       'Enterprise Architecture',
-      'AI Architecture',
-      'RPA',
-      'Business Process Automation',
-      'TOGAF',
-      'Digital Transformation',
-      'IT Governance',
-      'Agentic AI',
-      'Business Automation using AI',
-      'Enterprise Architecture Manager',
-      'Chief Enterprise Architect',
-      'Principal Enterprise Architect',
+      'Technology Governance',
+      'Mergers & Acquisitions',
     ],
-    sameAs: [
-      'https://www.linkedin.com/in/sanjeetkumar',
-      'https://twitter.com/sanjeet_kumar',
-    ],
+    sameAs: ['https://www.linkedin.com/in/sanjeetkumar'],
   });
 
   return (
     <>
       <Head
-        title="Sanjeet Kumar · Enterprise Architect · Enterprise Architecture Director · AI Architect"
-        description="Sanjeet Kumar - Enterprise Architect & Enterprise Architecture Director at LandSure Systems. Available for Enterprise Architecture Manager, Chief Enterprise Architect, and Principal Enterprise Architect roles. TOGAF & Harvard AI certified with 20+ years experience in Enterprise Architecture, AI/RPA, Business Automation using AI, IT Governance, and Digital Transformation. Expertise in UiPath, Blue Prism, Agentic AI, CGEIT, COBIT 5, PMP."
-        ogImage={`${getBaseUrl()}/assets/images/og-image.png`}
+        title="Sanjeet Kumar - Enterprise Architecture Director | Sovereign AI & Tech Governance"
+        description="Sanjeet Kumar is an Enterprise Architecture Director specializing in Sovereign AI, AI Ethics, and Technology Governance. Helping organizations build secure, compliant, and future-proof AI ecosystems."
+        keywords={[
+          'Sovereign AI',
+          'Enterprise Architecture',
+          'AI Governance',
+          'TOGAF',
+          'Digital Strategy',
+          'M&A Technology',
+        ]}
+        ogImage={`${getBaseUrl()}/api/og`}
         overrideTitle
         structuredData={structuredData}
       />

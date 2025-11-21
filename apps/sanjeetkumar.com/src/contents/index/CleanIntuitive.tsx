@@ -58,7 +58,7 @@ function CleanIntuitive() {
         />
       </header>
       <SectionContent>
-        <div className={clsx('flex', 'lg:gap-12')}>
+        <div className={clsx('flex items-start', 'lg:gap-12')}>
           <div
             className={clsx('-mt-8 flex-1 flex-col gap-3', 'flex')}
           >
@@ -74,7 +74,9 @@ function CleanIntuitive() {
             ))}
           </div>
           <div
-            className={clsx('relative flex flex-1 items-center justify-center')}
+            className={clsx(
+              'sticky top-24 relative flex flex-1 items-center justify-center'
+            )}
           >
             <div
               className={clsx(
