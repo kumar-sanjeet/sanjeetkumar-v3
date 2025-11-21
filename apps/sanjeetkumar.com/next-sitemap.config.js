@@ -3,6 +3,7 @@ module.exports = {
   siteUrl: 'https://www.sanjeetkumar.com',
   priority: 0.6,
   generateRobotsTxt: true,
+  outDir: 'out',
   generateIndexSitemap: false,
   transform: async (config, path) => {
     const defaultValue = (priority) => ({
