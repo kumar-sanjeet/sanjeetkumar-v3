@@ -56,7 +56,7 @@ function Index() {
           'Digital Strategy',
           'M&A Technology',
         ]}
-        ogImage={`${getBaseUrl()}/api/og`}
+        ogImage={`${getBaseUrl()}/assets/images/og-image.png`}
         overrideTitle
         structuredData={structuredData}
       />
