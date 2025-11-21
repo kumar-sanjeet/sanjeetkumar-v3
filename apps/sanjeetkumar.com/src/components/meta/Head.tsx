@@ -51,6 +51,7 @@ function Head({
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
       <meta property="og:site_name" content="Sanjeet Kumar" />
+      <meta property="og:url" content={currentUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="en_US" />
 

@@ -46,7 +46,7 @@ function Index() {
   return (
     <>
       <Head
-        title="Sanjeet Kumar - Director of Enterprise Architecture"
+        title="Sanjeet Kumar - Director of Enterprise Architecture | Sovereign AI"
         description="Enterprise Architecture Director specializing in Sovereign AI, M&A Integration, and Technology Governance."
         keywords={[
           'Sovereign AI',
@@ -56,7 +56,7 @@ function Index() {
           'Digital Strategy',
           'M&A Technology',
         ]}
-        ogImage={`${getBaseUrl()}/og-image.png`}
+        ogImage="https://sanjeetkumar.com/og-image.png"
         overrideTitle
         structuredData={structuredData}
       />
