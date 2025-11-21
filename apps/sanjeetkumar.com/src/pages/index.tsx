@@ -46,8 +46,8 @@ function Index() {
   return (
     <>
       <Head
-        title="Sanjeet Kumar - Enterprise Architecture Director | Sovereign AI & Tech Governance"
-        description="Sanjeet Kumar is an Enterprise Architecture Director specializing in Sovereign AI, AI Ethics, and Technology Governance. Helping organizations build secure, compliant, and future-proof AI ecosystems."
+        title="Sanjeet Kumar - Director of Enterprise Architecture"
+        description="Enterprise Architecture Director specializing in Sovereign AI, M&A Integration, and Technology Governance."
         keywords={[
           'Sovereign AI',
           'Enterprise Architecture',
@@ -56,7 +56,7 @@ function Index() {
           'Digital Strategy',
           'M&A Technology',
         ]}
-        ogImage={`${getBaseUrl()}/assets/images/og-image.png`}
+        ogImage={`${getBaseUrl()}/og-image.png`}
         overrideTitle
         structuredData={structuredData}
       />

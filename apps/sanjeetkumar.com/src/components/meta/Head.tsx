@@ -32,6 +32,7 @@ function Head({
       {keywords.length > 0 && (
         <meta name="keywords" content={keywords.join(', ')} />
       )}
+      <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
       <link rel="icon" href="/favicon/favicon-96x96.png" type="image/png" />
       <link
         rel="icon"
@@ -48,7 +49,10 @@ function Head({
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`Image with "${title}" text.`} />
+      <meta property="og:image:alt" content={title} />
+      <meta property="og:site_name" content="Sanjeet Kumar" />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content="en_US" />
 
       {/* twitter card */}
       <meta name="twitter:card" content="summary_large_image" />
