@@ -39,8 +39,7 @@ function PageHeader({
         >
           <div
             className={clsx(
-              'background-image background-image--fade-out pointer-events-none absolute inset-0 hidden select-none',
-              'lg:block'
+              'background-image background-image--fade-out pointer-events-none absolute inset-0 select-none'
             )}
           >
             <div className={clsx('content-wrapper relative h-full')}>

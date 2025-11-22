@@ -8,6 +8,8 @@ const BaseFrontMatter = z.object({
   title: z.string().max(110),
   description: z.string().max(120),
   caption: z.string().default(''),
+  showPattern: z.boolean().optional(),
+  animationType: z.enum(['network', 'hex', 'grid']).optional(),
   layout: z.string().default('Post'),
 });
 

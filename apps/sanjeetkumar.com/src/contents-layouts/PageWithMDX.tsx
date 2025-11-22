@@ -2,6 +2,9 @@ import WithTableOfContents from '@/components/layouts/WithTableOfContents';
 import Head from '@/components/meta/Head';
 import SkipNavigation from '@/components/navigations/SkipNavigation';
 import PageHeader from '@/components/PageHeader';
+import HeaderImage from '@/contents/projects/HeaderImage';
+import NetworkBackground from '@/components/NetworkBackground';
+import HexGridBackground from '@/components/HexGridBackground';
 
 import { getPageOgImageUrl } from '@/helpers/page';
 
@@ -14,7 +17,7 @@ interface PageWithMDXProps {
 }
 
 function PageWithMDX({
-  frontMatter: { title, description, caption },
+  frontMatter: { title, description, caption, showPattern, animationType },
   tableOfContents,
   children = null,
 }: PropsWithChildren<PageWithMDXProps>) {
@@ -24,11 +27,23 @@ function PageWithMDX({
     description,
   });
 
+  const getHeaderImage = () => {
+    if (!showPattern) return null;
+    if (animationType === 'network') return <NetworkBackground />;
+    if (animationType === 'hex') return <HexGridBackground />;
+    return <HeaderImage />;
+  };
+
   return (
     <>
       <SkipNavigation />
       <Head title={title} description={description} ogImage={image.default} />
-      <PageHeader title={title} description={description} caption={caption} />
+      <PageHeader
+        title={title}
+        description={description}
+        caption={caption}
+        headerImage={getHeaderImage()}
+      />
       <WithTableOfContents tableOfContents={tableOfContents}>
         {children}
       </WithTableOfContents>

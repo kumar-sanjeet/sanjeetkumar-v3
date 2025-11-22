@@ -1,5 +1,5 @@
 import EducationContents from '@/contents/Education';
-import HeaderImage from '@/contents/Education/HeaderImage';
+import HexGridBackground from '@/components/HexGridBackground';
 import Page from '@/contents-layouts/Page';
 
 function Education() {
@@ -9,7 +9,7 @@ function Education() {
         title: 'Education & Certifications',
         description: `Academic background and professional certifications.`,
       }}
-      headerImage={<HeaderImage />}
+      headerImage={<HexGridBackground />}
     >
       <EducationContents />
     </Page>

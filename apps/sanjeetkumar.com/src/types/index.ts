@@ -18,6 +18,8 @@ export type TBaseFrontMatter = {
   title: string;
   description: string;
   caption?: string;
+  showPattern?: boolean;
+  animationType?: 'network' | 'hex' | 'grid';
 };
 
 export type TPageFrontMatter = TBaseFrontMatter;

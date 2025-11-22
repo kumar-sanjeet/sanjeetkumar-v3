@@ -26,8 +26,8 @@ function Projects() {
       strokeLinecap="round"
       strokeLinejoin="round"
       className={clsx(
-        'stroke-accent-500 -mt-20 h-full opacity-60',
-        'dark:opacity-40'
+        'stroke-accent-500 -mt-20 h-full opacity-70',
+        'dark:opacity-50'
       )}
     >
       <m.rect
