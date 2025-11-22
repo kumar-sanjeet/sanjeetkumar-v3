@@ -32,15 +32,9 @@ function Head({
       {keywords.length > 0 && (
         <meta name="keywords" content={keywords.join(', ')} />
       )}
-      <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
-      <link rel="icon" href="/favicon/favicon-96x96.png" type="image/png" />
-      <link
-        rel="icon"
-        href="/favicon/web-app-manifest-512x512.png"
-        sizes="512x512"
-        type="image/png"
-      />
-      <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+      <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+      <link rel="shortcut icon" href="/icon.svg" />
+      <link rel="apple-touch-icon" href="/icon.svg" />
 
       {/* seo */}
       <link rel="canonical" href={currentUrl} />
