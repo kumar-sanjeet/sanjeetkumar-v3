@@ -1,7 +1,6 @@
 
 import clsx from 'clsx';
 import { m } from 'framer-motion';
-import Image from 'next/image';
 
 import {
   FigmaIcon,
@@ -11,6 +10,7 @@ import {
   TailwindCssIcon,
   TypeScriptIcon,
 } from '@/components/Icons';
+import SmartLogo from '@/components/shared/SmartLogo';
 
 const animation = {
   hide: { x: -8, opacity: 0 },
@@ -50,9 +50,8 @@ function HeaderTechStack() {
               rel="noreferrer"
               className={clsx('transition duration-200 hover:opacity-70')}
             >
-              <img
-                src="https://cdn.simpleicons.org/openai/808080"
-                alt="OpenAI"
+              <SmartLogo
+                name="openai"
                 className="h-6 w-6 dark:invert"
               />
             </a>
@@ -66,11 +65,8 @@ function HeaderTechStack() {
               rel="noreferrer"
               className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}
             >
-              <Image
-                src="/assets/images/logos/togaf.png"
-                alt="TOGAF"
-                width={24}
-                height={24}
+              <SmartLogo
+                name="togaf"
                 className="h-6 w-auto object-contain"
               />
             </a>
@@ -84,11 +80,8 @@ function HeaderTechStack() {
               rel="noreferrer"
               className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}
             >
-              <Image
-                src="/assets/images/logos/pmp.svg"
-                alt="PMP"
-                width={24}
-                height={24}
+              <SmartLogo
+                name="pmp"
                 className="h-6 w-auto object-contain"
               />
             </a>
@@ -102,11 +95,8 @@ function HeaderTechStack() {
               rel="noreferrer"
               className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}
             >
-              <Image
-                src="/assets/images/logos/cgeit.png"
-                alt="CGEIT"
-                width={24}
-                height={24}
+              <SmartLogo
+                name="cgeit"
                 className="h-6 w-auto object-contain"
               />
             </a>
@@ -120,11 +110,8 @@ function HeaderTechStack() {
               rel="noreferrer"
               className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}
             >
-              <Image
-                src="/assets/images/logos/aws.png"
-                alt="AWS"
-                width={24}
-                height={24}
+              <SmartLogo
+                name="aws"
                 className="h-6 w-auto object-contain"
               />
             </a>
@@ -138,11 +125,8 @@ function HeaderTechStack() {
               rel="noreferrer"
               className={clsx('transition duration-200 hover:opacity-70 grayscale opacity-60 hover:grayscale-0 hover:opacity-100')}
             >
-              <Image
-                src="/assets/images/logos/cobit.png"
-                alt="COBIT"
-                width={24}
-                height={24}
+              <SmartLogo
+                name="cobit"
                 className="h-6 w-auto object-contain"
               />
             </a>
@@ -156,11 +140,10 @@ function HeaderTechStack() {
               rel="noreferrer"
               className={clsx('transition duration-200 hover:opacity-80')}
             >
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/assets/images/google-antigravity.png"
                 alt="Google Antigravity"
-                width={24}
-                height={24}
                 className={clsx('h-6 w-6')}
               />
             </a>

@@ -1,5 +1,6 @@
-import EducationContents from '@/contents/Education';
 import HexGridBackground from '@/components/HexGridBackground';
+
+import EducationContents from '@/contents/Education';
 import Page from '@/contents-layouts/Page';
 
 function Education() {
