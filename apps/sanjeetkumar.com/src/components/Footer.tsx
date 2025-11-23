@@ -88,17 +88,6 @@ function FooterGroup({ title, links }: FooterGroupProps) {
 function FooterDescription() {
   return (
     <div className={clsx('max-w-[348px]')}>
-      <div
-        className={clsx(
-          'mb-3 text-[13px] text-slate-600',
-          'dark:text-slate-400'
-        )}
-      >
-        About Me
-      </div>
-      <p className={clsx('mb-4 font-normal leading-relaxed')}>
-        Enterprise Architecture Director & AI Architect with expertise in AI, Digital Transformation, and M&A.
-      </p>
       <ul className={clsx('-ml-2 flex gap-1')}>
         <li>
           <a
@@ -136,7 +125,7 @@ function Footer() {
   return (
     <footer
       className={clsx(
-        'background-grid background-grid--fade-in border-divider-light mt-24 pt-16 text-sm text-slate-900',
+        'background-grid background-grid--fade-in border-divider-light mt-8 pt-16 text-sm text-slate-900',
         'dark:border-divider-dark dark:text-slate-200'
       )}
     >

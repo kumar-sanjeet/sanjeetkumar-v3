@@ -60,7 +60,7 @@ function CleanIntuitive() {
       <SectionContent>
         <div className={clsx('flex items-start', 'lg:gap-12')}>
           <div
-            className={clsx('-mt-8 flex-1 flex-col gap-3', 'flex')}
+            className={clsx('-mt-8 flex-1 flex-col gap-3', 'flex', 'min-w-0')}
           >
             {content.map((item, i) => (
               <SectionButton
@@ -75,7 +75,8 @@ function CleanIntuitive() {
           </div>
           <div
             className={clsx(
-              'sticky top-24 relative flex flex-1 items-center justify-center'
+              'sticky top-24 relative flex flex-1 items-center justify-center',
+              'min-w-0'
             )}
           >
             <div

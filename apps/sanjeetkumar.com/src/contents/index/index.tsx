@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 
+import AboutMe from '@/contents/index/AboutMe';
 import CleanIntuitive from '@/contents/index/CleanIntuitive';
 import FeaturedCard from '@/contents/index/FeaturedCard';
 import Header from '@/contents/index/Header';
@@ -139,6 +140,9 @@ function IndexContents() {
       </div>
       <section>
         <CleanIntuitive />
+      </section>
+      <section>
+        <AboutMe />
       </section>
     </>
   );
